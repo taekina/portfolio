@@ -40,7 +40,10 @@ _____________________________________*/
   margin-right: auto; }
 
 #header_img {
+  background-image: url(../img/header.jpg);
   width: 100%;
+  background-size: cover;
+  background-position: center center;
   height: 250px; }
 
 section {
