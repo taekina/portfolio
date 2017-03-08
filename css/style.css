@@ -82,7 +82,7 @@ section {
 #contact {
   background-color: #96CED5;
   text-align: center; }
-  #contact p {
+  #contact h3 {
     font-size: 1.5rem;
     margin-bottom: 20px; }
   #contact .btn {
