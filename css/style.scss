@@ -1,0 +1,133 @@
+@charset 'UTF-8';
+@import "compass";
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+
+/*font
+_____________________________________*/
+$basefont_family: Abel, "sans-serif";
+
+/*color
+_____________________________________*/
+$basecolor: #FCF7ED;
+$sabcolor: #96CED5;
+$keycolor: #7EC5CC;
+$accentcolor: #528288;
+$fontcolor: #4c4c4c;
+
+/*Base
+_____________________________________*/
+html{
+    font-size: 70%;
+}
+
+body{
+    font-color: $fontcolor;
+    font-size: 1.2rem;
+    font-family: $basefont_family;
+    background-color: $basecolor;
+    line-height: 1.5;
+	letter-spacing: 0.1em;
+    
+}
+a {
+    @include link-colors($accentcolor, darken($accentcolor, 10%), lighten($accentcolor, 5%), darken($accentcolor, 10%));
+    text-decoration: none;
+	font-weight: bold;
+}
+
+/*Align
+_____________________________________*/
+.text_center{
+    text-align: center;
+}
+/* Layout
+_____________________________________*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//Header
+#header_img{
+    width: 100%;
+    height: 250px;
+}
+//Secton
+section{
+    padding: 30px 0;
+    .content{
+    width: 90%;
+    }
+}
+//Secton1
+#section1{
+    background-color: $basecolor;
+    .content{
+        @include display-flex;
+        justify-content: space-between;
+		@include flex-direction(column);
+    }
+    h2{
+        margin-bottom: 30px;
+        font-size: 2rem;
+        font-weight: bold;
+		color: $fontcolor;
+    }
+    .box{
+        @include flex(1);
+        margin: 10px 0;
+        padding: 20px;
+        background-color: $sabcolor;
+        @include border-radius(4px);
+        @include box-sizing(border-box);
+    }
+    h3{
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin-bottom:10px;
+        color: $fontcolor;
+    }
+}
+//contact
+#contact{
+    background-color:$sabcolor;
+    text-align: center;
+    p{
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    .btn{
+        background-color: $basecolor;
+        padding: 10px 120px;
+        @include border-radius(4px);
+        box-shadow:2px 2px 2px #666666;
+    }
+}
+//footer
+footer{
+    background-color:$accentcolor;
+    font-size: 1rem;
+    text-align: center;
+    color: $basecolor;
+	padding: 3px 0;
+}
+/*pc
+_____________________________________*/
+@media (min-width: 769px) {
+//Header
+	#header_img{
+    	width: 100%;
+    	height: 500px;
+}
+//section1
+	#section1{
+		.content{
+			 @include flex-direction(row);
+		}
+		.box{
+			margin: 0 10px;
+		}
+	}
+}
